@@ -140,12 +140,21 @@ module.exports = function () {
       await s3.upload(manifestPath, "manifest.json");
     }
 
+    const uploads = [];
+
+    // Upload template preview images
+    const imagesPath = path.join(controller.rootPath, "images");
+    const images = fs.readdirSync(imagesPath);
+
+    for (let image of images) {
+      uploads.push(s3.upload(path.join(imagesPath, image), `images/${image}`))
+    }
+
     // Upload template tar files
     const distTemplatesPath = path.join(controller.rootPath, "dist", "templates");
     fs.ensureDirSync(distTemplatesPath);
     const templateTypes = fs.readdirSync(distTemplatesPath);
 
-    const uploads = [];
 
     // for each file in the manifest
     // iterate, read and upload

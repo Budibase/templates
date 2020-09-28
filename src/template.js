@@ -1,5 +1,6 @@
 const fs = require("fs-extra")
 const path = require("path")
+const constants = require("./constants")
 
 /**
  * Individual parsed template.
@@ -25,10 +26,11 @@ module.exports = function (rootPath, name, type) {
    */
   template.getManifestEntry = () => {
     return {
+      ...template.definition,
       name: template.name,
       type: template.type,
       key: `${template.type}/${template.name}`,
-      ...template.definition,
+      image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/${template.definition.image}`
     }
   }
 }
