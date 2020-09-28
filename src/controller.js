@@ -99,22 +99,22 @@ module.exports = function () {
     fs.removeSync(distTemplatesPath);
     fs.ensureDirSync(distTemplatesPath);
 
-    // Copy all built template bundles to their correct structure
+    // pack each template into a tar 
     for (let template of controller.templates) {
       // Create new tar file
-      const templateTarPath = path.join(distTemplatesPath, template.type);
-      fs.ensureDirSync(templateTarPath);
+      const tarOutputPath = path.join(distTemplatesPath, template.type)
+      fs.ensureDirSync(tarOutputPath)
 
-      console.log(`Writing tar bundle to ${templateTarPath}...`);
-      const cwd = path.join(controller.rootPath, "dist");
+      console.log(`Writing tar bundle to ${tarOutputPath}...`);
+      const cwd = path.join(controller.rootPath, "templates", template.type)
       tar.c(
         {
           gzip: true,
-          file: path.join(templateTarPath, `${template.name}.tar.gz`),
+          file: path.join(tarOutputPath, `${template.name}.tar.gz`),
           sync: true,
           cwd,
         },
-        ["templates"]
+        [template.name]
       );
     }
   });

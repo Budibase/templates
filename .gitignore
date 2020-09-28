@@ -108,3 +108,4 @@ dist
 
 # Other
 test.js
+.DS_Store
