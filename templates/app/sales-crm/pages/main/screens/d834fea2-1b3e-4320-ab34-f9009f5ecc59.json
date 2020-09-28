@@ -1,0 +1,61 @@
+{
+  "description": "",
+  "url": "",
+  "props": {
+    "_id": "d834fea2-1b3e-4320-ab34-f9009f5ecc59",
+    "_component": "@budibase/standard-components/container",
+    "_styles": {
+      "normal": {
+        "margin": "0px",
+        "padding": "64px",
+        "background-image": "None"
+      },
+      "hover": {},
+      "active": {},
+      "selected": {}
+    },
+    "_code": "",
+    "className": "",
+    "onLoad": [],
+    "type": "div",
+    "_children": [
+      {
+        "_id": "ef60083f-4a02-4df3-80f3-a0d3d16847e7",
+        "_component": "@budibase/standard-components/heading",
+        "_styles": {
+          "normal": {},
+          "hover": {},
+          "active": {},
+          "selected": {}
+        },
+        "_code": "",
+        "className": "",
+        "text": "CV Submission",
+        "type": "h1",
+        "_instanceId": "inst_cf8ace4_69efc0d72e6f443db2d4c902c14d9394",
+        "_instanceName": "",
+        "_children": []
+      },
+      {
+        "_id": "c5c6dfd727b234fd8be5b7e43147b085d",
+        "_component": "@budibase/standard-components/dataform",
+        "_styles": {
+          "normal": {},
+          "hover": {},
+          "active": {},
+          "selected": {}
+        },
+        "_code": "",
+        "model": "b1d04a06a2784648ae3520cf1fb06e4b",
+        "title": "",
+        "buttonText": "",
+        "_instanceId": "inst_b70abba_16feb394866140a1ac3f2e450e99f28a",
+        "_instanceName": "Dataform 1",
+        "_children": []
+      }
+    ],
+    "_instanceName": "Home"
+  },
+  "route": "/*",
+  "name": "d834fea2-1b3e-4320-ab34-f9009f5ecc59"
+}
