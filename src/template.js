@@ -25,8 +25,10 @@ module.exports = function (rootPath, name, type) {
    * @returns {object} the manifest entry
    */
   template.getManifestEntry = () => {
-    const { category, name, description, image } = template.definition
+    const { category, name, description, image, icon, background } = template.definition
     return {
+      background,
+      icon,
       category,
       description,
       name,
