@@ -1,5 +1,4 @@
 # Budibase Templates
-# Budibase Templates
 
 ## Adding a Template
 To add a new template to this repository, you need to perform these steps:
