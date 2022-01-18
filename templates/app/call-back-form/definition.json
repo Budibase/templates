@@ -1,7 +1,7 @@
 {
   "name": "Call Back Form",
   "category": "Forms",
-  "description": "Keep on top of IT tickets and incoming requests for IT assistance.",
+  "description": "Create an easy tool for receiving call-back requests",
   "icon": "Calendar",
   "background": "#318b40"
 }
