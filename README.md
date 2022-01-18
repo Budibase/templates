@@ -32,3 +32,10 @@ Merge to master, and it will automatically get picked up by BB
 
 !<img width="737" alt="Screenshot 2021-11-04 at 15 48 07" src="https://user-images.githubusercontent.com/11256663/140335639-bcf88013-9bf2-4311-a8f0-af2e0d990f4e.png">
 
+After merging, you create a destination URL for the template section of the website, simple append the name of your template to the end of:
+https://budibase.app/builder?template=app/
+
+For example:
+https://budibase.app/builder?template=app/it-help-desk
+
+
