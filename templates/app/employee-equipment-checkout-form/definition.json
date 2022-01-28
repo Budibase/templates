@@ -3,5 +3,6 @@
   "category": "Forms",
   "description": "Submit and manage equipment checkout requests.",
   "icon": "Calendar",
-  "background": "#3da74e"
+  "background": "#3da74e",
+  "url": "https://budibase.com/forms/templates/employee-equipment-checkout-form/"
 }

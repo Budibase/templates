@@ -3,5 +3,6 @@
   "category": "HR",
   "description": "Post jobs to a public portal, and manage applications via an admin panel.",
   "icon": "Briefcase",
-  "background": "#378EF0"
+  "background": "#378EF0",
+  "url": "https://budibase.com/business-apps/templates/applicant-tracking-system/"
 }

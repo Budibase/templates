@@ -20,7 +20,8 @@ Create a `definition.json`, which includes its name, icon etc. Here's an example
   "category": "IT",
   "description": "Keep on top of IT tickets and incoming requests for IT assistance.",
   "icon": "Help",
-  "background": "#33AB84"
+  "background": "#33AB84",
+  "url": "https://budibase.com/business-apps/templates/open-source-ticketing-system/"
 }
 ```
 

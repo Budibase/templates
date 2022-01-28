@@ -3,5 +3,6 @@
   "category": "Portals",
   "description": "Self-service portal for B2C businesses",
   "icon": "Demographic",
-  "background": "#864ccc"
+  "background": "#864ccc",
+  "url": "https://budibase.com/portals/templates/customer-account-portal/"
 }

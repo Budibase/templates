@@ -3,5 +3,6 @@
   "category": "HR",
   "description": "Create, manage, and approve vacation requests.",
   "icon": "Calendar",
-  "background": "#ffb55b"
+  "background": "#ffb55b",
+  "url": "https://budibase.com/forms/templates/vacation-request-form-template/"
 }

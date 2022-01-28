@@ -3,5 +3,6 @@
   "category": "Portal",
   "description": "Use our portal to simplify education admin tasks",
   "icon": "GraphDonut",
-  "background": "#23b2b8"
+  "background": "#23b2b8",
+  "url": "https://budibase.com/portals/templates/university-portal-app/"
 }
