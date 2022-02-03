@@ -3,5 +3,6 @@
   "category": "Approval Apps",
   "description": "Centralize, manage, and analyze business travel requests.",
   "icon": "Briefcase",
-  "background": "#4b9cf5"
+  "background": "#4b9cf5",
+  "url": "https://budibase.com/approval-apps/templates/travel-approval-request-template/"
 }

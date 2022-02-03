@@ -3,5 +3,6 @@
   "category": "Forms",
   "description": "Create an easy tool for receiving call-back requests",
   "icon": "Calendar",
-  "background": "#318b40"
+  "background": "#318b40",
+  "url": "https://budibase.com/forms/templates/call-back-form-template/"
 }

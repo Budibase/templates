@@ -3,5 +3,6 @@
   "category": "Admin Panels",
   "description": "Manage fleet servicing and vehicle data with ease.",
   "icon": "Car",
-  "background": "#4646c6"
+  "background": "#4646c6",
+  "url": "https://budibase.com/admin-panels/templates/car-rental-admin-panel/"
 }

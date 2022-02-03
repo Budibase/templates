@@ -25,13 +25,14 @@ module.exports = function (rootPath, name, type) {
    * @returns {object} the manifest entry
    */
   template.getManifestEntry = () => {
-    const { category, name, description, image, icon, background } = template.definition
+    const { category, name, description, image, icon, background, url } = template.definition
     return {
       background,
       icon,
       category,
       description,
       name,
+      url,
       type: template.type,
       key: `${template.type}/${template.name}`,
       image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/${image}`

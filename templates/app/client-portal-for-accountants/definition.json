@@ -3,5 +3,6 @@
   "category": "Portals",
   "description": "Quickly and securely request, submit, and share accounting documents",
   "icon": "Calculator",
-  "background": "#dfbf00"
+  "background": "#dfbf00",
+  "url": "https://budibase.com/portals/templates/client-portal-for-accountants/"
 }

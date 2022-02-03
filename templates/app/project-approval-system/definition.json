@@ -3,5 +3,6 @@
   "category": "Approval Apps",
   "description": "Use our tool to initiate, manage, and delivery projects.",
   "icon": "ConversionFunnel",
-  "background": "#f9a43f"
+  "background": "#f9a43f",
+  "url": "https://budibase.com/approval-apps/templates/project-approval-system/"
 }

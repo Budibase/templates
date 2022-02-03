@@ -3,5 +3,6 @@
   "category": "Forms",
   "description": "Use our powerful form to gather details and manage recurring payments.",
   "icon": "Form",
-  "background": "#268e6c"
+  "background": "#268e6c",
+  "url": "https://budibase.com/forms/templates/recurring-credit-card-authorization-form/"
 }

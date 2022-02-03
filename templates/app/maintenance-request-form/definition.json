@@ -3,5 +3,6 @@
   "category": "Forms",
   "description": "Create, track, and manage maintenance requests.",
   "icon": "Actions",
-  "background": "#8282f6"
+  "background": "#8282f6",
+  "url": "https://budibase.com/forms/templates/maintenance-request-form-template/"
 }
