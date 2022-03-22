@@ -3,7 +3,7 @@ const path = require("path")
 const constants = require("./constants")
 
 /**
- * Image key resolution in the event
+ * Image key resolution
  * 
  * @param templateName the name of the template
  * @param imageKey an optional key for the image
