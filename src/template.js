@@ -4,17 +4,19 @@ const constants = require("./constants")
 
 /**
  * Image key resolution
- * 
+ *
  * @param templateName the name of the template
  * @param imageKey an optional key for the image
  */
-const resolveImageKey = (templateName, imageKey) => {
-  if(imageKey){
-    return imageKey
+ const resolveImageKey = (templateName, imageKey) => {
+  if (imageKey) {
+    return imageKey;
   }
-  let parsedTemplateName = templateName ? templateName.toLowerCase().trim() : "bb-template-thumbnail"
-  return parsedTemplateName.replace(/\s+/g, "-")
-}
+  let parsedTemplateName = templateName
+    ? templateName.toLowerCase().trim()
+    : `no-key`;
+  return parsedTemplateName.replace(/\s+/g, "-");
+};
 
 /**
  * Individual parsed template.
