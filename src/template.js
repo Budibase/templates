@@ -2,6 +2,24 @@ const fs = require("fs-extra")
 const path = require("path")
 const constants = require("./constants")
 
+const thumbnailFileExstenion = ".png"
+
+/**
+ * Image key resolution
+ *
+ * @param templateName the name of the template
+ * @param imageKey an optional key for the image
+ */
+ const resolveImageKey = (templateName, imageKey) => {
+  if (imageKey) {
+    return imageKey;
+  }
+  let parsedTemplateName = templateName
+    ? templateName.toLowerCase().trim()
+    : `no-key`;
+  return parsedTemplateName.replace(/\s+/g, "-");
+};
+
 /**
  * Individual parsed template.
  *
@@ -17,7 +35,6 @@ module.exports = function (rootPath, name, type) {
   const definitionPath = path.join(template.path, "definition.json")
   template.definition = require(definitionPath)
 
-
   /**
    * Builds the structure used inside the manifest for this template.
    * This consists of the name, type, and template definition JSON.
@@ -26,6 +43,10 @@ module.exports = function (rootPath, name, type) {
    */
   template.getManifestEntry = () => {
     const { category, name, description, image, icon, background, url } = template.definition
+    
+    const imageKey = resolveImageKey(name, image)
+    const imageFileName = imageKey + thumbnailFileExstenion
+
     return {
       background,
       icon,
@@ -35,7 +56,7 @@ module.exports = function (rootPath, name, type) {
       url,
       type: template.type,
       key: `${template.type}/${template.name}`,
-      image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/${image}`
+      image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/${imageFileName}`
     }
   }
 }
