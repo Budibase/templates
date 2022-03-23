@@ -1,0 +1,8 @@
+{
+  "name": "Work Order App",
+  "category": "Operations",
+  "description": "Request, managage, and carry out regular maintenance orders.",
+  "icon": "Actions",
+  "background": "#f76d74",
+  "url": "https://budibase.com/Operations/templates/work-order-app/"
+}
