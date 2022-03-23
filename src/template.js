@@ -2,7 +2,7 @@ const fs = require("fs-extra")
 const path = require("path")
 const constants = require("./constants")
 
-const thumbnailFileExstenion = ".png"
+const thumbnailFileExtension = ".png"
 
 /**
  * Image key resolution
@@ -45,7 +45,7 @@ module.exports = function (rootPath, name, type) {
     const { category, name, description, image, icon, background, url } = template.definition
     
     const imageKey = resolveImageKey(name, image)
-    const imageFileName = imageKey + thumbnailFileExstenion
+    const imageFileName = imageKey + thumbnailFileExtension
 
     return {
       background,
@@ -56,7 +56,7 @@ module.exports = function (rootPath, name, type) {
       url,
       type: template.type,
       key: `${template.type}/${template.name}`,
-      image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/${imageFileName}`
+      image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/images/${imageFileName}`
     }
   }
 }
