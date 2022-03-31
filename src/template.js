@@ -15,14 +15,7 @@ const thumbnailFileExtension = ".png"
     return imageKey;
   }
   
-  let resolvedTemplateName = templateName
-    ? templateName.toLowerCase().trim()
-    : `no-key`;
-
-  let templateName_NoSlashes = resolvedTemplateName.replace(/\//g, "-")
-  let templateName_NoSpaces = templateName_NoSlashes.replace(/\s+/g, "-");
-
-  return templateName_NoSpaces
+  return templateName?.toLowerCase().trim().replace(/\/|\s+/g, "-") || "no-key"
 };
 
 /**
