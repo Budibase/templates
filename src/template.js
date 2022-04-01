@@ -14,10 +14,8 @@ const thumbnailFileExtension = ".png"
   if (imageKey) {
     return imageKey;
   }
-  let parsedTemplateName = templateName
-    ? templateName.toLowerCase().trim()
-    : `no-key`;
-  return parsedTemplateName.replace(/\s+/g, "-");
+  
+  return templateName?.toLowerCase().trim().replace(/\/|\s+/g, "-") || "no-key"
 };
 
 /**
