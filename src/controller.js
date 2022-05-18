@@ -71,6 +71,7 @@ module.exports = function () {
       let manifest = {};
       manifest.templates = {
         app: {},
+        qa: {},
         screen: {},
         component: {},
       };
