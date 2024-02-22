@@ -1,0 +1,8 @@
+{
+  "name": "Information request form",
+  "category": "Forms",
+  "description": "The information request template provides users with a form to request information and an app to track the status of their request.",
+  "icon": "Form",
+  "background": "#274F9C",
+  "url": "https://budibase.com/forms"
+}
