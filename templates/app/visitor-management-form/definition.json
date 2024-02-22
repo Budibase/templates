@@ -1,9 +1,0 @@
-{
-  "name": "Visitor check-in form",
-  "category": "Forms",
-  "description": "A simple form/app that allows visitors to check-in and check-out. A great starting
-                        point for building a visitor management app",
-  "icon": "Form",
-  "background": "#20a3a8",
-  "url": "https://budibase.com/forms"
-}
