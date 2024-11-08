@@ -1,0 +1,8 @@
+{
+  "name": "Expense Approval",
+  "category": "HR",
+  "description": "Our expense approval template offers a ready-to-use solution for enabling employees to submit claims for review and authorization. However, it’s also fully customizable, providing a basis for creating your own bespoke solution in Budibase.",
+  "icon": "Workflow",
+  "background": "#9F8FFF",
+  "url": "https://docs.budibase.com/docs/expense-approval"
+}
