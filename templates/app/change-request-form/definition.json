@@ -1,8 +1,0 @@
-{
-  "name": "Change request form",
-  "category": "Forms",
-  "description": "The change request form template allows users to request changes, securely. Process owners can also review and update requests",
-  "icon": "Form",
-  "background": "#9F8FFF",
-  "url": "https://budibase.com/forms/"
-}
