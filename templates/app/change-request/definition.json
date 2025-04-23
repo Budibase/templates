@@ -1,8 +1,9 @@
 {
-  "name": "Change Request",
+  "name": "Change request management",
   "category": "IT",
-  "description": "Our change management template offers a fully functional solution for handling incoming requests. Use it as a ready-to-deploy app or customize any aspect of its data, design, and logic to suit your own unique processes.",
+  "description": "Streamline requests, reviews, and approvals for changes.",
   "icon": "Workflow",
   "background": "#9F8FFF",
-  "url": "https://docs.budibase.com/docs/change-requests"
+  "url": "https://docs.budibase.com/docs/change-requests",
+  "new": true
 }

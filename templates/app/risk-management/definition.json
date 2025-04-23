@@ -1,8 +1,9 @@
 {
-  "name": "Risk Management",
+  "name": "Risk management",
   "category": "IT",
-  "description": "Our risk management template provides a ready-to-use solution for recording, assessing, and working with data around risks, incidents, and improvement initiatives.",
+  "description": "Identify, assess, and mitigate potential project risks.",
   "icon": "Workflow",
   "background": "#9F8FFF",
-  "url": "https://docs.budibase.com/docs/risk-management"
+  "url": "https://docs.budibase.com/docs/risk-management",
+  "new": true
 }
