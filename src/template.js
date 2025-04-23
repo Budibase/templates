@@ -42,7 +42,7 @@ module.exports = function (rootPath, name, type) {
    * @returns {object} the manifest entry
    */
   template.getManifestEntry = () => {
-    const { category, name, description, image, icon, background, url } = template.definition
+    const { category, name, description, image, icon, background, url, new: isNew } = template.definition
     
     const imageKey = resolveImageKey(name, image)
     const imageFileName = imageKey + thumbnailFileExtension
@@ -56,7 +56,8 @@ module.exports = function (rootPath, name, type) {
       url,
       type: template.type,
       key: `${template.type}/${template.name}`,
-      image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/images/${imageFileName}`
+      image: `https://${constants.AWS_S3_BUCKET_NAME}.s3.${constants.AWS_REGION}.amazonaws.com/images/${imageFileName}`,
+      new: isNew
     }
   }
 }
