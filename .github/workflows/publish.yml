@@ -2,21 +2,75 @@ name: Publish templates to S3
 
 on:
   workflow_dispatch:
+    inputs:
+      catalogue_version:
+        description: Optional immutable Project catalogue release version
+        required: false
+        type: string
+  pull_request:
   push:
-    branches: [ master ]
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: templates-${{ github.ref == 'refs/heads/master' && 'production' || github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  publish:
-    name: Publish
+  checks:
+    name: Validate templates
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: "12.x"
-      - run: yarn install
-      - run: yarn run publish:ci
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: corepack enable
+      - run: yarn install --frozen-lockfile --non-interactive
+      - run: yarn test
+      - run: yarn validate:projects
+      - run: yarn build
+
+  publish:
+    name: Publish legacy templates
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    needs: checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: corepack enable
+      - run: yarn install --frozen-lockfile --non-interactive
+      - run: yarn publish:ci
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+
+  publish-projects:
+    name: Publish Project catalogue
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    needs: checks
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: eu-west-1
+      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      PROJECT_TEMPLATE_REPOSITORY_URL: ${{ vars.PROJECT_TEMPLATE_REPOSITORY_URL }}
+      PROJECT_CATALOGUE_VERSION: ${{ inputs.catalogue_version || format('{0}-{1}', github.run_id, github.run_attempt) }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: corepack enable
+      - run: yarn install --frozen-lockfile --non-interactive
+      - run: yarn publish:projects:ci

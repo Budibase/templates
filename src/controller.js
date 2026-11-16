@@ -25,6 +25,9 @@ module.exports = function () {
     const directories = fs.readdirSync(templatesPath);
     let templates = [];
     for (let templateType of directories) {
+      if (templateType === "project") {
+        continue
+      }
       const templateTypePath = path.join(templatesPath, templateType);
       const templatesForType = fs.readdirSync(templateTypePath);
       for (let directory of templatesForType) {
