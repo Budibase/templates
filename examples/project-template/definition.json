@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "name": "Service desk",
+  "description": "Manage support requests and their approvals.",
+  "category": "IT",
+  "status": "active",
+  "owner": "solutions-engineering",
+  "icon": "Lifebuoy",
+  "background": "#33AB84",
+  "image": "preview.png",
+  "compatibility": {
+    "minBudibaseVersion": "4.0.0",
+    "requiredFeatures": ["projects"]
+  }
+}
